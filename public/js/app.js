@@ -100,11 +100,69 @@ class App extends React.Component {
             <div className="col">
               <input className="btn btn-success" type="submit" value="Add Movie" />
             </div>
-
           </div>
 
         </form>
 
+        <br/>
+        <h2>List of Movies</h2>
+
+        <ul>
+          {this.state.movies.map((movie) => {
+            return (
+
+              <li key={movie._id}>
+                <h3>Title: {movie.title}</h3>
+                <h4>Year: {movie.year}</h4>
+                <h4>Genre: {movie.genre}</h4>
+                <img src={movie.image} alt={movie.title} />
+
+                <details>
+
+                  <summary>Edit This Movie</summary>
+
+                  <form id={movie._id} onSubmit={this.updateMovie}>
+
+                    <div className="row">
+                      <div className="col-4">
+                        <label className="form-label" htmlFor="title">Title</label>
+                        <input className="form-control" type="text" id="title"
+                        onChange={this.handleChange} />
+                      </div>
+                      <div className="col-4">
+                        <label className="form-label" htmlFor="year">Year</label>
+                        <input className="form-control" type="text" id="year"
+                        onChange={this.handleChange} />
+                      </div>
+                      <div className="col-4">
+                        <label className="form-label" htmlFor="genre">Genre</label>
+                        <input className="form-control" type="text" id="genre"
+                        onChange={this.handleChange} />
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col">
+                        <label className="form-label" htmlFor="image">Image</label>
+                        <input className="form-control" type="text" id="image"
+                        onChange={this.handleChange} />
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <div className="col">
+                        <input className="btn btn-primary" type="submit" value="Update Movie" />
+                      </div>
+                    </div>
+
+                  </form>
+
+                </details>
+
+              </li>
+            )
+          })}
+        </ul>
 
       </div>
     )
