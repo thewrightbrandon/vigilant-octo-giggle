@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/thewrightbrandon/vigilant-octo-giggle#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7"
   }
 }
