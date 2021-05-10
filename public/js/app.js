@@ -159,6 +159,10 @@ class App extends React.Component {
 
                 </details>
 
+                <br/>
+                <button className="btn btn-danger" onClick={this.deleteMovie} value={movie._id}>
+                  Remove Movie
+                </button>
               </li>
             )
           })}
