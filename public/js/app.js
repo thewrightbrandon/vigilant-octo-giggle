@@ -66,9 +66,9 @@ class App extends React.Component {
     return (
       <div>
 
-        <h2>Add Movie</h2>
+        <h2>ADD MOVIE</h2>
 
-        <form onSubmit={this.handleSubmit}>
+        <form className="createMovie" onSubmit={this.handleSubmit}>
 
           <div className="row">
             <div className="col-4">
@@ -105,16 +105,16 @@ class App extends React.Component {
         </form>
 
         <br/>
-        <h2>List of Movies</h2>
+        <h2>LIST OF MOVIES</h2>
 
         <ul>
           {this.state.movies.map((movie) => {
             return (
 
               <li key={movie._id}>
-                <h3>Title: {movie.title}</h3>
-                <h4>Year: {movie.year}</h4>
-                <h4>Genre: {movie.genre}</h4>
+                <h3>{movie.title}</h3>
+                <h4>{movie.year}</h4>
+                <h4>{movie.genre}</h4>
                 <img src={movie.image} alt={movie.title} />
 
                 <details>
@@ -124,17 +124,19 @@ class App extends React.Component {
                   <form id={movie._id} onSubmit={this.updateMovie}>
 
                     <div className="row">
-                      <div className="col-4">
+                      <div className="col">
                         <label className="form-label" htmlFor="title">Title</label>
                         <input className="form-control" type="text" id="title"
                         onChange={this.handleChange} />
                       </div>
-                      <div className="col-4">
+                    </div>
+                    <div className="row">
+                      <div className="col-6">
                         <label className="form-label" htmlFor="year">Year</label>
                         <input className="form-control" type="text" id="year"
                         onChange={this.handleChange} />
                       </div>
-                      <div className="col-4">
+                      <div className="col-6">
                         <label className="form-label" htmlFor="genre">Genre</label>
                         <input className="form-control" type="text" id="genre"
                         onChange={this.handleChange} />
