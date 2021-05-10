@@ -1,3 +1,58 @@
 body {
   font-family: 'Roboto Mono', monospace;
+  background-color: navajowhite;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2%;
+  text-decoration: underline;
+}
+
+h3 {
+  text-align: center;
+}
+
+.createMovie {
+  background-color: cornflowerblue;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.row {
+  margin: 3% auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border: 2px solid black;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li {
+  display: flex;
+  flex-flow: column;
+  flex-basis: 27%;
+  justify-content: space-between;
+  align-items: center;
+  background: cornflowerblue;
+  box-sizing: border-box;
+  border: 3px solid black;
+  padding: 1% 2%;
+  margin: 3%;
+}
+
+.btn {
+  border: 2px solid black;
 }
