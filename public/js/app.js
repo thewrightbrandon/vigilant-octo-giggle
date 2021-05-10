@@ -66,7 +66,7 @@ class App extends React.Component {
     return (
       <div>
 
-        <h2>Add Movie</h2>
+        <h2>ADD MOVIE</h2>
 
         <form className="createMovie" onSubmit={this.handleSubmit}>
 
@@ -105,7 +105,7 @@ class App extends React.Component {
         </form>
 
         <br/>
-        <h2>List of Movies</h2>
+        <h2>LIST OF MOVIES</h2>
 
         <ul>
           {this.state.movies.map((movie) => {
